@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import logements from "./data/logements.json"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>Bienvenue sur KASA</h1>
+      <p>Nombre de logements : {logements.length}</p>
+
+      <ul>
+        {logements.map((logement) => (
+          <li key={logement.id}>
+            {logement.title}
+              <ul>
+                <li>Localisation : {logement.location}</li>
+                <li>Propriétaire : {logement.host.name}</li>
+                <li>Nombre d'étoiles : {logement.rating}/5</li><br />
+              </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
