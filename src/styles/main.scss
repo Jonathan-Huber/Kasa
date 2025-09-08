@@ -1,0 +1,21 @@
+// ========================
+// Styles globaux
+// ========================
+@use "./reset";
+@use "./variables";
+@use "./mixinx";
+@use "./base";
+
+// ========================
+// Composants
+// ========================
+@use "../components/Header/header";
+@use "../components/Footer/footer";
+
+// ========================
+// Pages
+// ========================
+@use "../pages/Home/home";
+@use "../pages/About/about";
+@use "../pages/Logement/logement";
+@use "../pages/NotFound/notfound";
