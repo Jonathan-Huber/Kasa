@@ -1,25 +1,24 @@
-import logements from "./data/logements.json";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Logement from "./pages/Logement/Logement";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
-    <div>
-      <h1>Bienvenue sur KASA</h1>
-      <p>Nombre de logements : {logements.length}</p>
-
-      <ul>
-        {logements.map((logement) => (
-          <li key={logement.id}>
-            {logement.title}
-            <ul>
-              <li>Localisation : {logement.location}</li>
-              <li>Propriétaire : {logement.host.name}</li>
-              <li>Nombre d'étoiles : {logement.rating}/5</li>
-              <br />
-            </ul>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/logement" element={<Logement />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
