@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+
+import Layout from "./components/Layout/Layout";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -10,14 +10,40 @@ import NotFound from "./pages/NotFound/NotFound";
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/logement" element={<Logement />} />
-        <Route path="*" element={<NotFound />} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Layout>
+              <About />
+            </Layout>
+          }
+        />
+        <Route
+          path="/logement"
+          element={
+            <Layout>
+              <Logement />
+            </Layout>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <NotFound />
+            </Layout>
+          }
+        />
       </Routes>
-      <Footer />
     </Router>
   );
 }
