@@ -1,21 +1,14 @@
-import bannerImage from "../../../assets/images/home-banner.jpg";
 import "./_banner.scss";
 
-function Banner() {
+function Banner({ image, alt = "", children, overlayClass = "" }) {
   return (
     <section className="banner container">
       <div className="banner__image-wrapper">
-        <img
-          src={bannerImage}
-          alt="Chez vous, partout et ailleurs"
-          className="banner__image"
-        />
-        <div className="banner__overlay"></div>
+        <img src={image} alt={alt} className="banner__image" />
+        <div className={`banner__overlay ${overlayClass}`}></div>
       </div>
-      <h2 className="banner__title">
-        Chez vous,
-        <span className="banner__line-break"> partout et ailleurs</span>
-      </h2>
+
+      {children && <h2 className="banner__title">{children}</h2>}
     </section>
   );
 }
