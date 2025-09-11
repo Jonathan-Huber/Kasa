@@ -1,0 +1,28 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.home__cards-wrapper {
+  margin-bottom: v.$spacing-md2;
+
+  @include m.respond-to(desktop) {
+    background-color: v.$color-home-cards-bg;
+    border-radius: v.$border-radius-lg;
+    padding: v.$spacing-xxxl;
+    margin-bottom: v.$spacing-xxxl;
+  }
+}
+
+.home__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$spacing-md2;
+
+  @include m.respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.respond-to(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 60px;
+  }
+}
