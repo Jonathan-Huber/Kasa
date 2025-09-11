@@ -1,5 +1,12 @@
+import Banner from "../../components/shared/Banner/Banner";
+
 function Home() {
-  return <h1>Page d’accueil</h1>;
+  return (
+    <>
+      <Banner />
+      {/* CardLogement */}
+    </>
+  );
 }
 
 export default Home;

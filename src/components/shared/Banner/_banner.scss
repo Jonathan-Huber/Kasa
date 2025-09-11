@@ -1,0 +1,82 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 111px;
+  margin-bottom: v.$spacing-md2;
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: v.$border-radius-md;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+  }
+
+  &__title {
+    max-width: 100%;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: v.$spacing-xl2;
+    color: v.$color-text-light;
+    font-size: v.$font-lg;
+    font-weight: v.$font-weight-bold;
+    z-index: 2;
+    line-height: 1;
+
+    .banner__line-break {
+      display: block;
+    }
+  }
+
+  @include m.respond-to(tablet) {
+    height: 167px;
+
+    .banner__title {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: v.$font-xl;
+
+      .banner__line-break {
+        display: inline;
+      }
+    }
+  }
+
+  @include m.respond-to(desktop) {
+    height: 223px;
+
+    .banner__title {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: v.$font-xxl;
+      text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,  
+        -1px 1px 0 #000,  
+        1px 1px 0 #000;
+    
+      .banner__line-break {
+        display: inline;
+      }
+    }  
+  }
+}
