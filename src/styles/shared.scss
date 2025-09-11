@@ -1,0 +1,9 @@
+// ========================
+// Composants réutilisables
+// ========================
+
+// Collapse → utilisé dans Logement et About
+@use "../components/shared/Collapse/collapse";
+
+// Banner → utilisé dans Home et About
+@use "../components/shared/Banner/banner";

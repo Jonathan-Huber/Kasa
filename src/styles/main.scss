@@ -7,14 +7,6 @@
 @use "./base";
 
 // ========================
-// Composants
+// Composants réutilisables
 // ========================
-@use "../components/Footer/footer";
-
-// ========================
-// Pages
-// ========================
-@use "../pages/Home/home";
-@use "../pages/About/about";
-@use "../pages/Logement/logement";
-@use "../pages/NotFound/notfound";
+@use "./shared";
