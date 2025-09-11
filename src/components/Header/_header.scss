@@ -1,0 +1,71 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: v.$spacing-md2 auto;
+
+  &__logo img {
+    display: block;
+    width: 145px;
+    height: auto;
+  }
+
+  &__nav {
+    display: flex;
+    gap: v.$spacing-nav-mobile;
+
+    a {
+      font-size: v.$font-sm;
+      font-weight: v.$font-weight-medium;
+      text-transform: uppercase;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// --- Desktop
+@include m.respond-to(desktop) {
+  .header {
+    margin-top: v.$spacing-header-top-desktop;
+
+    &__logo img {
+      width: 210px;
+    }
+
+    &__nav {
+      gap: v.$spacing-nav-desktop;
+
+      a {
+      font-size: v.$font-lg;
+      text-transform: none;
+      }
+    }
+
+  }
+}
+
+// --- Tablet
+@include m.respond-to(tablet) {
+  .header {
+    margin-top: v.$spacing-xl;
+
+    &__logo img {
+      width: 180px;
+    }
+
+    &__nav {
+      gap: v.$spacing-nav-desktop;
+
+      a {
+      font-size: v.$font-md;
+      }
+    }
+
+  }
+}

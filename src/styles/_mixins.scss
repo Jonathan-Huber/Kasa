@@ -1,0 +1,15 @@
+@use 'variables' as v;
+
+// Responsive 
+@mixin respond-to($device) {
+  @if $device == tablet {
+    @media (min-width: v.$breakpoint-tablet) and (max-width: (v.$breakpoint-desktop - 1)) {
+      @content;
+    }
+  }
+  @else if $device == desktop {
+    @media (min-width: v.$breakpoint-desktop) {
+      @content;
+    }
+  }
+}

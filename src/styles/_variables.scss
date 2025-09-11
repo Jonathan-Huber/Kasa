@@ -20,15 +20,35 @@ $font-xl: 2.57rem;  // ~36px
 $font-xxl: 3.43rem; // ~48px
 
 // Espacements
-$spacing-xs: 0.29rem;   // ~4px
-$spacing-sm: 0.57rem;   // ~8px
-$spacing-md: 1.14rem;   // ~16px
-$spacing-lg: 1.71rem;   // ~24px
-$spacing-xl: 2.29rem;   // ~32px
-$spacing-xxl: 3.43rem;  // ~48px
-$spacing-xxxl: 4.57rem; // ~64px
+$spacing-xs: 0.29rem;   // 4px
+$spacing-sm: 0.57rem;   // 8px
+$spacing-sm2: 0.86rem;  // 12px
+$spacing-md: 1.14rem;   // 16px
+$spacing-md2: 1.43rem;  // 20px
+$spacing-lg: 1.71rem;   // 24px
+$spacing-lg2: 2rem;     // 28px
+$spacing-xl: 2.29rem;   // 32px
+$spacing-xl2: 2.57rem;  // 36px
+$spacing-xxl: 2.86rem;  // 40px
+$spacing-xxl2: 3.14rem; // 44px
+$spacing-xxxl: 3.43rem; // 48px
+
+$spacing-nav-mobile: 26px;
+$spacing-nav-desktop: 64px;
+
+$spacing-header-top-desktop: 45px;
 
 // Bordures
 $border-radius-sm: 5px;
 $border-radius-md: 10px;
 $border-radius-lg: 25px;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Breakpoint
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
