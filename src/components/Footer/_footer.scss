@@ -8,7 +8,6 @@
   height: 209px;
   background-color: v.$color-footer-bg;
 
-
   &__wrapper {
     width: 100%;
     display: flex;
@@ -23,24 +22,13 @@
     width: 122px;
     text-align: center;
     font-size: v.$font-sm;
-  }
 
-}
-
-// --- Desktop
-@include m.respond-to(desktop) {
-  .footer {
-    &__text {
+    @include m.respond-to(desktop) {
       width: 100%;
       font-size: v.$font-lg;
     }
-  }
-}
 
-// --- Tablet
-@include m.respond-to(tablet) {
-  .footer {
-    &__text {
+    @include m.respond-to(tablet) {
       width: 100%;
       font-size: v.$font-md;
     }

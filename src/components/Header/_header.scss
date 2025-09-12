@@ -7,65 +7,57 @@
   align-items: center;
   margin: v.$spacing-md2 auto;
 
+  @include m.respond-to(tablet) {
+    margin-top: v.$spacing-xl;
+  }
+
+  @include m.respond-to(desktop) {
+    margin-top: v.$spacing-header-top-desktop;
+  }
+
   &__logo img {
     display: block;
     width: 145px;
     height: auto;
+
+    @include m.respond-to(tablet) {
+      width: 180px;
+    }
+
+    @include m.respond-to(desktop) {
+      width: 210px;
+    }
   }
 
   &__nav {
     display: flex;
     gap: v.$spacing-nav-mobile;
 
+    @include m.respond-to(tablet) {
+      gap: v.$spacing-nav-desktop;
+    }
+
+    @include m.respond-to(desktop) {
+      gap: v.$spacing-nav-desktop;
+    }
+
     a {
       font-size: v.$font-sm;
       font-weight: v.$font-weight-medium;
       text-transform: uppercase;
 
+      @include m.respond-to(tablet) {
+        font-size: v.$font-md;
+      }
+
+      @include m.respond-to(desktop) {
+        font-size: v.$font-lg;
+        text-transform: none;
+      }
+
       &.active {
         text-decoration: underline;
       }
     }
-  }
-}
-
-// --- Desktop
-@include m.respond-to(desktop) {
-  .header {
-    margin-top: v.$spacing-header-top-desktop;
-
-    &__logo img {
-      width: 210px;
-    }
-
-    &__nav {
-      gap: v.$spacing-nav-desktop;
-
-      a {
-      font-size: v.$font-lg;
-      text-transform: none;
-      }
-    }
-
-  }
-}
-
-// --- Tablet
-@include m.respond-to(tablet) {
-  .header {
-    margin-top: v.$spacing-xl;
-
-    &__logo img {
-      width: 180px;
-    }
-
-    &__nav {
-      gap: v.$spacing-nav-desktop;
-
-      a {
-      font-size: v.$font-md;
-      }
-    }
-
   }
 }
