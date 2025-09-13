@@ -1,6 +1,10 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
+html, body {
+  height: 100%;
+}
+
 html {
   font-size: 14px; // base mobile → 1rem = 14px
 }
