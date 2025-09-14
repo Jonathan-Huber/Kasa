@@ -50,16 +50,13 @@ a {
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
-}
 
-@include m.respond-to(tablet) {
-  .container {
+  @include m.respond-to(tablet) {
     padding: 0 50px;
   }
-}
 
-@include m.respond-to(desktop) {
-  .container {
+  @include m.respond-to(desktop) {
     padding: 0 100px;
   }
 }
+
