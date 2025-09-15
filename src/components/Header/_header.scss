@@ -43,16 +43,16 @@
     }
 
     a {
-      font-size: v.$font-sm;
+      font-size: v.$font-xs;
       font-weight: v.$font-weight-medium;
       text-transform: uppercase;
 
       @include m.respond-to(tablet) {
-        font-size: v.$font-md;
+        font-size: v.$font-lg;
       }
 
       @include m.respond-to(desktop) {
-        font-size: v.$font-lg;
+        font-size: v.$font-xl;
         text-transform: none;
       }
 

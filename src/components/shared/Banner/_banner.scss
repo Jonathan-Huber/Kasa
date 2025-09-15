@@ -54,7 +54,7 @@
     transform: translateY(-50%);
     left: v.$spacing-xl2;
     color: v.$color-text-light;
-    font-size: v.$font-lg;
+    font-size: v.$font-xl;
     font-weight: v.$font-weight-bold;
     z-index: 2;
     line-height: 1;
@@ -62,13 +62,13 @@
     @include m.respond-to(tablet) {
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: v.$font-xl;
+      font-size: v.$font-xxl;
     }
 
     @include m.respond-to(desktop) {
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: v.$font-xxl;
+      font-size: v.$font-xxxl;
       text-shadow: 
         -1px -1px 0 #000,  
         1px -1px 0 #000,  

@@ -21,16 +21,16 @@
   &__text {
     width: 122px;
     text-align: center;
-    font-size: v.$font-sm;
+    font-size: v.$font-xs;
 
     @include m.respond-to(desktop) {
       width: 100%;
-      font-size: v.$font-lg;
+      font-size: v.$font-xl;
     }
 
     @include m.respond-to(tablet) {
       width: 100%;
-      font-size: v.$font-md;
+      font-size: v.$font-lg;
     }
   }
 }
