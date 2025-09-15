@@ -1,0 +1,12 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.about {
+  margin-bottom: v.$spacing-md2;
+
+  &__collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
