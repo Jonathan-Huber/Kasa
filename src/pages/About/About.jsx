@@ -8,6 +8,7 @@ import aboutData from "../../data/about.json";
 function About() {
   return (
     <div className="about">
+      <h1 className="sr-only">À propos de Kasa</h1>
       <Banner
         image={aboutBannerImage}
         alt=""
