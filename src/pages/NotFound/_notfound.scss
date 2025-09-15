@@ -1,0 +1,67 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 113px;
+  margin: 86px auto;
+  text-align: center;
+
+  @include m.respond-to(tablet) {
+    margin: 96px auto;
+    gap : 126px;
+  }
+
+  @include m.respond-to(desktop) {
+    margin: 106px auto;
+    gap : 139px;
+  }
+
+  &__title {
+    color: v.$color-primary;
+    font-size: 96px;
+    line-height: 0.9;
+    font-weight: v.$font-weight-bold;
+
+    @include m.respond-to(tablet) {
+      font-size: 192px;
+    }
+
+    @include m.respond-to(desktop) {
+      font-size: 288px;
+    }
+  }
+
+  &__message {
+    max-width: 230px;
+    font-size: v.$font-lg;
+    font-weight: v.$font-weight-medium;
+    color: v.$color-primary;
+
+    @include m.respond-to(tablet) {
+      max-width: 100%;
+      font-size: v.$font-xl;
+    }
+
+    @include m.respond-to(desktop) {
+      max-width: 100%;
+      font-size: v.$font-xxl;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-weight: v.$font-weight-medium;
+
+    @include m.respond-to(tablet) {
+      font-size: v.$font-md;
+    }
+
+    @include m.respond-to(desktop) {
+      font-size: v.$font-lg;
+    }
+  }
+}
