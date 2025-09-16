@@ -9,6 +9,7 @@
 
   @include m.respond-to(tablet) {
     height: 167px;
+    margin-bottom: v.$spacing-xl;
   }
 
   @include m.respond-to(desktop) {

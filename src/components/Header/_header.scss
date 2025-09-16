@@ -6,7 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: v.$spacing-md2 auto;
+  margin: 0 auto;
+  margin-top: v.$spacing-md2;
 
   @include m.respond-to(tablet) {
     margin-top: v.$spacing-xl;

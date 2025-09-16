@@ -1,3 +1,6 @@
+@use "../../styles/variables" as v;
+@use "../../styles//mixins" as m;
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -6,4 +9,13 @@
 
 .layout__content {
   flex: 1;
+  padding: v.$spacing-lg2 0;
+
+  @include m.respond-to(tablet) {
+    padding: v.$spacing-xxl 0;
+  }
+
+  @include m.respond-to(desktop) {
+    padding: v.$spacing-page-top-desktop 0;
+  }
 }
