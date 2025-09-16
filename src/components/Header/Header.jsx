@@ -26,7 +26,7 @@ function Header() {
           Accueil
         </Link>
         <Link to="/about" className={isAbout ? "active" : ""}>
-          À propos
+          A Propos
         </Link>
       </nav>
     </header>
