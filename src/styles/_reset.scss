@@ -20,6 +20,17 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
 /* box-sizing */
 *, *::before, *::after {
   box-sizing: border-box;

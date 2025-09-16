@@ -11,21 +11,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding: 6px 10px;
     background-color: v.$color-primary;
     color: v.$color-text-light;
     font-weight: v.$font-weight-bold;
-    cursor: pointer;
-    border: none;
     border-radius: v.$border-radius-sm;
     transition: background-color 0.3s;
 
     @include m.respond-to(tablet) {
-      padding: 16px 18px;
+      padding: 8px 15px;
     }
 
     @include m.respond-to(desktop) {
-      padding: 16px 18px;
+      padding: 8px 15px;
     }
 
     &:hover {
