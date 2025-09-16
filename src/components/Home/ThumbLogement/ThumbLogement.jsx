@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import "./_thumblogement.scss";
 
 function ThumbLogement({ logement }) {
   return (
-    <a href="#" className="card">
-      <img src={logement.cover} alt={logement.title} className="card__image" />
-      <h3 className="card__title">{logement.title}</h3>
-    </a>
+    <Link to={`/logement/${logement.id}`} className="thumb">
+      <img src={logement.cover} alt={logement.title} className="thumb__image" />
+      <h3 className="thumb__title">{logement.title}</h3>
+    </Link>
   );
 }
 
