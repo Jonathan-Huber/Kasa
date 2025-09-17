@@ -4,7 +4,6 @@
 
 .collapse {
   width: 100%;
-  border-radius: v.$border-radius-sm;
 
   &__header {
     width: 100%;
@@ -24,6 +23,7 @@
 
     @include m.respond-to(desktop) {
       padding: 8px 15px;
+      border-radius: v.$border-radius-md;
     }
 
     &:hover {
@@ -59,7 +59,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: v.$spacing-sm;
+    gap: v.$spacing-xxs;
     transform: translateY(-100%);
     transition: transform 0.5s ease;
     background-color: color.scale(v.$color-home-cards-bg, $lightness:5%);
