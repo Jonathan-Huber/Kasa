@@ -4,7 +4,7 @@ import "./_thumblogement.scss";
 function ThumbLogement({ logement }) {
   return (
     <Link to={`/logement/${logement.id}`} className="thumb">
-      <img src={logement.cover} alt={logement.title} className="thumb__image" />
+      <img src={logement.cover} alt="" className="thumb__image" />
       <h3 className="thumb__title">{logement.title}</h3>
     </Link>
   );
