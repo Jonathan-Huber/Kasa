@@ -62,7 +62,7 @@
     gap: v.$spacing-xxs;
     transform: translateY(-100%);
     transition: transform 0.5s ease;
-    background-color: color.scale(v.$color-home-cards-bg, $lightness:5%);
+    background-color: color.scale(v.$color-home-cards-bg, $lightness:45%);
     padding: 16px 20px 20px 20px;
     border-radius: v.$border-radius-sm;
 
