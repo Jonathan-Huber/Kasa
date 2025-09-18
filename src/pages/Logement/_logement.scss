@@ -3,5 +3,170 @@
 
 .logement {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  gap: v.$spacing-sm;
+
+  @include m.respond-to(tablet) {
+    gap: v.$spacing-md;
+  }
+
+  @include m.respond-to(desktop) {
+    gap: v.$spacing-lg;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: v.$spacing-md;
+
+    @include m.respond-to(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include m.respond-to(desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-bloc1 {
+      display: flex;
+      flex-direction: column;
+      gap: v.$spacing-sm;
+
+      @include m.respond-to(tablet) {
+        gap: v.$spacing-sm;
+      }
+
+      @include m.respond-to(desktop) {
+        gap: v.$spacing-md2;
+      }
+
+      &-top{
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+          font-size: v.$font-lg;
+          color: v.$color-primary;
+          font-weight: v.$font-weight-medium;
+
+          @include m.respond-to(tablet) {
+            font-size: v.$font-xl;
+          }
+
+          @include m.respond-to(desktop) {
+            font-size: v.$font-xxl;
+          }
+        }
+
+        &-location {
+          font-weight: v.$font-weight-medium;
+
+          @include m.respond-to(tablet) {
+            font-size: v.$font-md;
+          }
+
+          @include m.respond-to(desktop) {
+            font-size: v.$font-lg;
+          }
+        }
+      }
+
+      &-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+
+    &-bloc2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: v.$spacing-sm;
+
+      @include m.respond-to(tablet) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      @include m.respond-to(desktop) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: v.$spacing-md2;
+      }
+
+      &-host {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: v.$spacing-sm;
+        max-width: 100px;
+        flex-shrink: 0;
+
+        @include m.respond-to(tablet) {
+          max-width: 125px;
+        }
+
+        @include m.respond-to(desktop) {
+          max-width: 150px;
+        }
+
+        &-name {
+          font-size: v.$font-xs;
+          font-weight: v.$font-weight-medium;
+          color: v.$color-primary;
+          text-align: right;
+          white-space: normal;
+
+          @include m.respond-to(tablet) {
+            font-size: v.$font-md;
+          }
+
+          @include m.respond-to(desktop) {
+            font-size: v.$font-lg;
+          }
+        }
+
+        &-picture {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+
+          @include m.respond-to(tablet) {
+            width: 48px;
+            height: 48px;
+          }
+
+          @include m.respond-to(desktop) {
+            width: 64px;
+            height: 64px;
+          }
+        }
+
+        // &-rating {
+
+        // }
+      }
+    }
+  }
+
+  &__collapse {
+    display: flex;
+    flex-direction: column;
+    gap: v.$spacing-md2;
+
+    @include m.respond-to(tablet) {
+      flex-direction: column;
+    }
+
+    @include m.respond-to(desktop) {
+      flex-direction: row;
+      gap: 76px;
+    }
+  } 
 }

@@ -1,0 +1,26 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.tag {
+  display: inline-block;
+  min-width: 84px;
+  padding: 2px 12px;
+  background-color: #ff6060;
+  color: #fff;
+  border-radius: v.$border-radius-sm;
+  font-size: v.$font-xxs;
+  font-weight: v.$font-weight-bold;
+  text-align: center;
+
+  @include m.respond-to(tablet) {
+      min-width: 115px;
+      font-size: v.$font-xs;
+    }
+
+    @include m.respond-to(desktop) {
+      border-radius: v.$border-radius-md;
+      min-width: 115px;
+      font-size: v.$font-base;
+      padding: 2px 12px;
+    }
+}
