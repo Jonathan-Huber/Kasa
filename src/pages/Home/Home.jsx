@@ -12,9 +12,9 @@ function Home() {
         <span className="banner__line-break"> partout et ailleurs</span>
       </Banner>
 
-      <div className="container">
-        <div className="home__cards-wrapper">
-          <div className="home__cards">
+      <div className="home container">
+        <div className="home__thumbs-wrapper">
+          <div className="home__thumbs">
             {logements.map((logement) => (
               <ThumbLogement key={logement.id} logement={logement} />
             ))}
