@@ -1,12 +1,30 @@
-# React + Vite
+# Kasa - Projet 7
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Ce projet fait partie de ma formation d'intégrateur web chez OpenClassrooms.  
+L’objectif est de créer un site web pour une agence de location de logements, en utilisant React pour la gestion des composants, Sass pour les styles, Vite comme bundler, et un système de gestion de version avec Git et GitHub.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Compétences visées
 
-## Expanding the ESLint configuration
+- Utilisation de Sass pour le CSS
+- Création de composants React réutilisables
+- Gestion des états et événements avec React
+- Versionnage du projet avec Git et GitHub
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies
+
+- HTML5
+- CSS3 / Sass
+- JavaScript (ES6+)
+- React
+- Vite
+- Git / GitHub
+
+## Statut
+
+En cours de développement
+
+## Auteur
+
+Jonathan-Huber
