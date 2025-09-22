@@ -19,7 +19,10 @@ function Logement() {
 
   return (
     <div className="logement container">
-      <Slideshow images={logement.pictures} />
+      <Slideshow
+        images={logement.pictures}
+        placeholderText="Aucune photos de logement disponible"
+      />
       <div className="logement__info">
         <div className="logement__info-bloc1">
           <div className="logement__info-bloc1-top">

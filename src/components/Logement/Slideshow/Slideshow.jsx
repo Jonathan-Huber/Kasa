@@ -2,8 +2,11 @@ import { useState } from "react";
 import "./_slideshow.scss";
 import ChevronLeft from "../../../assets/icons/chevron-left.svg";
 import ChevronRight from "../../../assets/icons/chevron-right.svg";
+import PlaceholderImg from "../../../assets/images/placeholder.webp";
 
-function Slideshow({ images }) {
+function Slideshow({ images, placeholderText }) {
+  const hasImages = images && images.length > 0;
+  const displayImages = hasImages ? images : [PlaceholderImg];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const previousSlide = () => {
@@ -18,11 +21,9 @@ function Slideshow({ images }) {
     );
   };
 
-  if (!images || images.length === 0) return null; // un placehoder ?
-
   return (
     <div className="slideshow">
-      {images.map((img, index) => (
+      {displayImages.map((img, index) => (
         <img
           key={index}
           src={img}
@@ -31,7 +32,11 @@ function Slideshow({ images }) {
         />
       ))}
 
-      {images.length > 1 && (
+      {!hasImages && placeholderText && (
+        <div className="slideshow__placeholder-text">{placeholderText}</div>
+      )}
+
+      {displayImages.length > 1 && hasImages && (
         <>
           <button
             className="slideshow__nav slideshow__nav--previous"

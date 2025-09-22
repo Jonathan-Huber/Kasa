@@ -51,6 +51,27 @@
     }
   }
 
+  &__placeholder-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: v.$color-primary;
+    font-weight: v.$font-weight-medium;
+    text-align: center;
+    z-index: 3;
+    pointer-events: none;
+
+    @include m.respond-to(tablet) {
+      font-size: v.$font-lg;
+    }
+
+    @include m.respond-to(desktop) {
+      font-size: v.$font-xl;
+    }
+  }
+
   &__nav {
     position: absolute;
     top: 50%;
