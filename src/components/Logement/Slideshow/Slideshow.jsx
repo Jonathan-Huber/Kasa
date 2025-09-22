@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import "./_slideshow.scss";
 import ChevronLeft from "../../../assets/icons/chevron-left.svg";
@@ -58,5 +59,10 @@ function Slideshow({ images, placeholderText }) {
     </div>
   );
 }
+
+Slideshow.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string),
+  placeholderText: PropTypes.string,
+};
 
 export default Slideshow;

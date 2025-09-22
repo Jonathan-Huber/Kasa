@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import StarFull from "../../../assets/icons/star-full.svg";
 import StarEmpty from "../../../assets/icons/star-empty.svg";
 import "./_rating.scss";
@@ -16,5 +17,10 @@ function Rating({ value, max = 5 }) {
     </div>
   );
 }
+
+Rating.propTypes = {
+  value: PropTypes.number.isRequired,
+  max: PropTypes.number,
+};
 
 export default Rating;

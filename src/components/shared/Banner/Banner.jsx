@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./_banner.scss";
 
 function Banner({ image, alt = "", children, overlayClass = "" }) {
@@ -12,5 +13,12 @@ function Banner({ image, alt = "", children, overlayClass = "" }) {
     </section>
   );
 }
+
+Banner.propTypes = {
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  children: PropTypes.node,
+  overlayClass: PropTypes.string,
+};
 
 export default Banner;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState, useRef } from "react";
 import "./_collapse.scss";
 import Chevron from "../../../assets/icons/chevron.svg";
@@ -52,5 +53,13 @@ function Collapse({ title, content }) {
     </div>
   );
 }
+
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
+};
 
 export default Collapse;
