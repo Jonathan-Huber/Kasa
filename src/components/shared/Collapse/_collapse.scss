@@ -6,15 +6,19 @@
   width: 100%;
 
   &__header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    
     padding: 6px 10px;
-    background-color: v.$color-primary;
+
     color: v.$color-text-light;
     font-weight: v.$font-weight-bold;
+
+    background-color: v.$color-primary;
     border-radius: v.$border-radius-sm;
+
     transition: background-color 0.3s;
 
     @include m.respond-to(tablet) {
@@ -23,6 +27,7 @@
 
     @include m.respond-to(desktop) {
       padding: 8px 15px;
+
       border-radius: v.$border-radius-md;
     }
 
@@ -44,7 +49,9 @@
 
     &-chevron {
       width: 16px;
+
       transition: transform 0.5s ease;
+
       &.open {
         transform: rotate(180deg);
       }
@@ -53,6 +60,7 @@
 
   &__content-wrapper {
     overflow: hidden;
+
     transition: max-height 0.5s ease;
   }
 
@@ -60,11 +68,14 @@
     display: flex;
     flex-direction: column;
     gap: v.$spacing-xxs;
+
+    padding: v.$spacing-md v.$spacing-md2 v.$spacing-md2 v.$spacing-md2;
+
+    background-color: color.scale(v.$color-home-cards-bg, $lightness:45%);
+    border-radius: v.$border-radius-sm;
+
     transform: translateY(-100%);
     transition: transform 0.5s ease;
-    background-color: color.scale(v.$color-home-cards-bg, $lightness:45%);
-    padding: 16px 20px 20px 20px;
-    border-radius: v.$border-radius-sm;
 
     &.open {
       transform: translateY(0);

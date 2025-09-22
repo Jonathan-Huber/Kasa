@@ -15,6 +15,7 @@ body {
   font-size: v.$font-base;
   line-height: 1.5;
   color: v.$color-text-dark;
+
   background-color: v.$color-background;
 }
 
@@ -37,18 +38,24 @@ a {
 
 .sr-only {
   position: absolute !important;
+
   width: 1px !important;
   height: 1px !important;
+  overflow: hidden !important;
+
+  clip-path: inset(50%) !important;
+  clip: rect(0 0 0 0);
+  white-space: nowrap !important;
+
   padding: 0 !important;
   margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
+
   border: 0 !important;
 }
 
 .container {
   max-width: 1440px;
+  
   padding: 0 20px;
   margin: 0 auto;
 

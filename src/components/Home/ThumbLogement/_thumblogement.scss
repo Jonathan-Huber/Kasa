@@ -2,13 +2,16 @@
 @use '../../../styles/mixins' as m;
 
 .thumb {
+  position: relative;
   display: block;
   height: 255px;
-  position: relative;
-  border-radius: v.$border-radius-md;
   overflow: hidden;
-  cursor: pointer;
+
   text-decoration: none;
+
+  border-radius: v.$border-radius-md;
+  
+  cursor: pointer;
 
   @include m.respond-to(desktop) {
     height: 340px;
@@ -17,7 +20,9 @@
   &::after {
     content: "";
     position: absolute;
+    z-index: 1;
     inset: 0;
+
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
@@ -25,7 +30,7 @@
       rgba(4, 4, 4, 0.205) 99.99%,
       rgba(0, 0, 0, 0.5) 100%
     );
-    z-index: 1;
+
     transition: background 0.3s ease;
   }
 
@@ -43,7 +48,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
     border-radius: v.$border-radius-md;
+
     transition: transform 0.3s ease;
   }
 
@@ -55,9 +62,10 @@
     position: absolute;
     bottom: v.$spacing-md2;
     left: v.$spacing-md2;
-    color: v.$color-text-light;
+    z-index: 2;
+
     font-size: v.$font-lg;
     font-weight: v.$font-weight-bold;
-    z-index: 1;
+    color: v.$color-text-light;
   }
 }
