@@ -1,7 +1,7 @@
 import Banner from "../../components/shared/Banner/Banner";
 import ThumbLogement from "../../components/Home/ThumbLogement/ThumbLogement";
 import logements from "../../data/logements.json";
-import homeBannerImage from "../../assets/images/home-banner.jpg";
+import homeBannerImage from "../../assets/images/home-banner.webp";
 import "./_home.scss";
 
 function Home() {

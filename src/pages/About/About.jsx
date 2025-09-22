@@ -1,6 +1,6 @@
 import "./_about.scss";
 import Banner from "../../components/shared/Banner/Banner";
-import aboutBannerImage from "../../assets/images/about-banner.jpg";
+import aboutBannerImage from "../../assets/images/about-banner.webp";
 
 import Collapse from "../../components/shared/Collapse/Collapse";
 import aboutData from "../../data/about.json";
