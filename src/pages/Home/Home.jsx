@@ -1,5 +1,5 @@
 import Banner from "../../components/shared/Banner/Banner";
-import ThumbLogement from "../../components/Home/ThumbLogement/ThumbLogement";
+import Thumb from "../../components/Home/Thumb/Thumb";
 import logements from "../../data/logements.json";
 import homeBannerImage from "../../assets/images/home-banner.webp";
 import "./_home.scss";
@@ -15,8 +15,8 @@ function Home() {
       <div className="home container">
         <div className="home__thumbs-wrapper">
           <div className="home__thumbs">
-            {logements.map((logement) => (
-              <ThumbLogement key={logement.id} logement={logement} />
+            {logements.map(({ id, cover, title }) => (
+              <Thumb key={id} id={id} cover={cover} title={title} />
             ))}
           </div>
         </div>
