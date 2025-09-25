@@ -3,15 +3,6 @@
 
 .home {
 
-  &__thumbs-wrapper {
-
-  @include m.respond-to(desktop) {
-    background-color: v.$color-home-cards-bg;
-    border-radius: v.$border-radius-lg;
-    padding: v.$spacing-xxxl;
-  }
-}
-
   &__thumbs {
     display: grid;
     grid-template-columns: 1fr;
@@ -25,6 +16,9 @@
     @include m.respond-to(desktop) {
       grid-template-columns: repeat(3, 1fr);
       gap: 50px 60px;
+      background-color: v.$color-home-cards-bg;
+      border-radius: v.$border-radius-lg;
+      padding: v.$spacing-xxxl;
     }
   }
 }
