@@ -61,6 +61,7 @@ Collapse.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]).isRequired,
+  HeadingTag: PropTypes.string,
 };
 
 export default Collapse;
