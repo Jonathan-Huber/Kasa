@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
 import "./_banner.scss";
 
-function Banner({ image, alt = "", children, overlayClass = "" }) {
+function Banner({
+  image,
+  alt = "",
+  children,
+  overlayClass = "",
+  HeadingTag = "h2",
+}) {
+  const TitleTag = HeadingTag;
   return (
     <section className="banner container">
       <div className="banner__image-wrapper">
@@ -9,7 +16,7 @@ function Banner({ image, alt = "", children, overlayClass = "" }) {
         <div className={`banner__overlay ${overlayClass}`}></div>
       </div>
 
-      {children && <h2 className="banner__title">{children}</h2>}
+      {children && <TitleTag className="banner__title">{children}</TitleTag>}
     </section>
   );
 }
@@ -19,6 +26,7 @@ Banner.propTypes = {
   alt: PropTypes.string,
   children: PropTypes.node,
   overlayClass: PropTypes.string,
+  HeadingTag: PropTypes.string,
 };
 
 export default Banner;
