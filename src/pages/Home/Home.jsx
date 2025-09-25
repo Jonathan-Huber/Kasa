@@ -16,7 +16,13 @@ function Home() {
         <div className="home__thumbs-wrapper">
           <div className="home__thumbs">
             {logements.map(({ id, cover, title }) => (
-              <Thumb key={id} id={id} cover={cover} title={title} />
+              <Thumb
+                key={id}
+                id={id}
+                cover={cover}
+                title={title}
+                HeadingTag={"h3"}
+              />
             ))}
           </div>
         </div>
