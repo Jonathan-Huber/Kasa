@@ -3,9 +3,10 @@ import { useState, useRef } from "react";
 import "./_collapse.scss";
 import Chevron from "../../../assets/icons/chevron.svg";
 
-function Collapse({ title, content }) {
+function Collapse({ title, content, HeadingTag = "h2" }) {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
+  const TitleTag = HeadingTag;
 
   const toggleCollapse = () => setIsOpen(!isOpen);
 
@@ -22,7 +23,7 @@ function Collapse({ title, content }) {
         onClick={toggleCollapse}
         aria-expanded={isOpen}
       >
-        <h2 className="collapse__header-title">{title}</h2>
+        <TitleTag className="collapse__header-title">{title}</TitleTag>
         <img
           src={Chevron}
           alt="chevron"
