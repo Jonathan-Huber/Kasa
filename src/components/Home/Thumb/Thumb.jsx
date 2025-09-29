@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import "./_thumb.scss";
 
 function Thumb({ id, cover, title, HeadingTag = "h2" }) {

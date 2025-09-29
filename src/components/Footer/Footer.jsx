@@ -1,4 +1,4 @@
-import logo from "../../assets/icons/logo-white.svg"; // logo blanc
+import logo from "../../assets/icons/logo-white.svg";
 import "./_footer.scss";
 
 function Footer() {

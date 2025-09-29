@@ -1,4 +1,4 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router";
 import logementsData from "../../data/logements.json";
 import Slideshow from "../../components/Logement/Slideshow/Slideshow";
 import Tag from "../../components/Logement/Tag/Tag";

@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router";
 import logo from "../../assets/icons/logo-primary.svg";
 import "./_header.scss";
 
