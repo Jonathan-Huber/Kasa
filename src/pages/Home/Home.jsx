@@ -6,13 +6,13 @@ import "./_home.scss";
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home container">
       <Banner image={homeBannerImage} alt="Chez vous, partout et ailleurs">
         Chez vous,
         <span className="banner__line-break"> partout et ailleurs</span>
       </Banner>
 
-      <div className="container">
+      <div className="">
         <div className="home__thumbs">
           {logements.map(({ id, cover, title }) => (
             <Thumb

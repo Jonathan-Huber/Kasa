@@ -10,7 +10,7 @@ function Banner({
 }) {
   const TitleTag = HeadingTag;
   return (
-    <section className="banner container">
+    <section className="banner">
       <div className="banner__image-wrapper">
         <img src={image} alt={alt} className="banner__image" />
         <div className={`banner__overlay ${overlayClass}`}></div>

@@ -7,7 +7,7 @@ import aboutData from "../../data/about.json";
 
 function About() {
   return (
-    <div className="about">
+    <div className="about container">
       <h1 className="sr-only">À propos de Kasa</h1>
       <Banner
         image={aboutBannerImage}
@@ -15,7 +15,7 @@ function About() {
         overlayClass="banner__overlay--light"
       />
 
-      <div className="about__collapses container">
+      <div className="about__collapses">
         {aboutData.map((item) => (
           <Collapse key={item.id} title={item.title} content={item.content} />
         ))}
