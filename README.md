@@ -23,7 +23,7 @@ L’objectif est de créer un site web pour une agence de location de logements,
 
 ## Statut
 
-En cours de développement
+- Finalisé et validé en soutenance le 26/09/2025
 
 ## Auteur
 
