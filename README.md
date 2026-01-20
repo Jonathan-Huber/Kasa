@@ -21,6 +21,10 @@ L’objectif est de créer un site web pour une agence de location de logements,
 - Vite
 - Git / GitHub
 
+## Lancement de l'application
+
+- `npm run dev`
+
 ## Statut
 
 - Finalisé et validé en soutenance le 26/09/2025
